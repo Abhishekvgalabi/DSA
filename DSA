@@ -1,0 +1,422 @@
+1)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+ main()
+ {
+int M,N,s,t,a,b;
+     void apple(int M,int a,int s);
+     void orange(int N,int b,int t);
+     scanf("%d%d",&s,&t);
+     scanf("%d%d",&a,&b);
+     scanf("%d%d",&M,&N);
+     if(a<s && s<t && t<b)
+     {
+         apple(M,a,s);
+         orange(N,b,t);
+     }
+     else 
+     {
+         printf("Invalid input\n");
+     }
+ }
+void apple(int M,int a,int s)
+{
+    int count=0,d,i;
+    for(i=1; i<=M; i++)
+    {
+        scanf("%d",&d);
+        
+        if((d+a)>=s)
+        {
+            count=count+1;
+        }
+        
+    }
+    printf("Apple count = %d\n",count);
+}
+
+void orange(int N,int b,int t)
+{
+    int count=0,d,i;
+    for(i=1; i<=N; i++)
+    {
+        scanf("%d",&d);
+        if((d+b)<=t)
+        {
+            count=count+1;
+        }
+    }
+    printf("Orange count = %d\n",count);
+}
+
+
+
+2)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+ int y;
+    scanf("%d",&y);
+    if(y>=1920 && y<=2700)
+    {
+    if(y%4==0 && y%400==0)
+    {
+
+    
+        printf("12.09.%d\n",y);
+    }
+    
+    
+      else 
+    {
+        printf("13.09.%d\n",y);
+    }
+    }
+    
+
+    else
+    {
+        printf("Invalid year\n");
+    }
+}
+
+
+
+
+3)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+main() 
+{
+  char C;
+    scanf("%c",&C);
+    if(C=='A' || C=='B'||C=='C'||C=='D'||C=='E'||C=='F'||C=='G'||C=='H'||C=='I'||C=='J'||C=='K'||C=='L'||C=='M'||C=='N'||C=='O'|| C=='P'||C=='Q'||C=='R'||C=='S'||C=='T'||C=='U'||C=='V'||C=='W'||C=='X'||C=='Y'||C=='Z')
+    {
+    if(C=='A' || C=='E' || C=='I' || C=='O' || C=='U')
+    {
+    printf("Vowel\n");
+    }
+    else
+    {
+        printf("Consonant\n");
+    }
+    }
+    else
+        printf("Invalid alphabet");
+}
+
+
+
+4)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+main() 
+{
+  int h,m;
+    scanf("%d %d",&h,&m);
+    if(h>=1 && h<=24 && m>=0 && m<=59)
+    {
+        if(h>=2 && h<3 && m>=0 && m<=59)
+        {
+            printf("highly efficient\n");
+        }
+        else if(h>=3 && h<4 && m>=0 && m<=59)
+        {
+            printf("improve speed\n");
+        }
+        else if(h>=4 && h<5 && m>=0 && m<=59)
+        {
+            printf("training to improve speed\n");
+        }
+        else if(h>=5)
+        {
+            printf("terminated\n");
+        }
+    }
+    else
+        printf("Invalid time\n");
+   
+}
+
+
+
+
+5)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+main()
+{
+  int salary;
+    char C;
+    void software_developer(char C,int salary);
+    void android_developer(char C,int salary);
+    void project_manager(char C,int salary);
+    scanf("%c %d",&C,&salary);
+    if(C=='S')
+    {
+     software_developer(C,salary);
+    }
+    else if(C=='A')
+    {
+     android_developer(C,salary);   
+    }
+    else if(C=='P')
+    {
+        project_manager(C,salary);
+    }
+    else
+    {
+        printf("Invalid designation\n");
+    }
+}
+
+void software_developer(char C,int salary)
+{
+    int tot_salary;
+  if (salary>=100000 && salary<=200000)
+  {
+     tot_salary=salary+(salary*0.05); 
+  }
+    else if(salary>=70000 && salary<100000)
+    {
+        tot_salary=salary+(salary*0.03);
+    }
+    else if(salary>=40000 && salary<70000)
+    {
+        tot_salary=salary+(salary*0.03);
+    }
+    printf("%d\n",tot_salary);
+}
+
+void android_developer(char C,int salary)
+{
+    int tot_salary;
+    if(salary>=80000 && salary<=160000)
+    {
+       tot_salary=salary+(salary*0.04) ;
+    }
+    else if(salary>=50000 && salary<80000)
+    {
+        tot_salary=salary+(salary*0.05);
+    }
+    printf("%d\n",tot_salary);
+}
+
+ void project_manager(char C,int salary)
+ {
+     int tot_salary;
+     if(salary>=100000 && salary<=200000)
+     {
+         tot_salary=salary+(salary*0.09);
+     }
+     else if(salary>=60000 && salary<100000)
+     {
+         tot_salary=salary+(salary*0.07);
+     }
+     else if(salary>=40000 && salary<60000)
+     {
+         tot_salary=salary+(salary*0.05);
+     }
+     printf("%d\n",tot_salary);
+ }
+
+
+
+
+6)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int x[30];
+main()
+{
+ int n ;
+    void read_array(int x[30], int n);
+    void max_sound(int x[30],int n);
+    scanf("%d",&n);
+    if(n>=1)
+    {
+        read_array(x,n);
+        max_sound(x,n);
+    }
+    else
+    {
+        printf("No sound recorded\n");
+    }
+}
+   
+    void read_array(int x[30], int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&x[i]);
+    }
+}
+
+void max_sound(int x[30],int n)
+{
+    int i,max=x[0];
+    for(i=0; i<n; i++)
+    {
+        if(x[i]>max)
+        {
+            max=x[i];
+        }
+    }
+    printf("%d",max);
+}
+
+
+
+
+
+7)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int x[50],i;
+main()
+{
+int n;
+    void read_array(int x[50],int n);
+    void sum_array(int x[50],int n);
+    void positive_array(int x[50],int n);
+    scanf("%d",&n);
+    if(n>=1)
+    {
+    read_array(x,n);
+    sum_array(x,n);
+    positive_array(x,n);
+    }
+    else
+    {
+        printf("Invalid input.\n");
+    }
+}
+
+    void read_array(int x[50],int n)
+{
+  int sum=0;
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&x[i]);
+        if(x[i]>=1)
+        {
+           sum=sum+x[i];
+           if(sum>=999)
+           {
+               break;
+           }
+        }
+    }
+
+}
+
+    void sum_array(int x[50],int n)
+{
+   int  sum=0;
+    for(i=0; i<n; i++)
+    {
+        if(x[i]>=1)
+        {
+           sum=sum+x[i];
+        }
+    }
+    printf("Sum is %d.\n",sum);
+}
+
+
+    void positive_array(int x[50],int n)
+{
+     int count=0;
+    for(i=0; i<n; i++)
+    {
+        if(x[i]>=1)
+        {
+            count=count+1;
+        }
+    }
+    printf("Numbers added %d.\n",count);
+}
+
+
+
+8)
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int a[50],i;
+main()
+{
+    int n;
+   void read_array(int a[50],int n);
+   void disply_array(int a[50],int n);
+   void min_array(int a[50],int n);
+    scanf("%d",&n);
+    if (n>=1)
+    {
+      read_array(a,n);
+        disply_array(a,n);
+        min_array(a,n);
+    }
+    else 
+    {
+        printf("Array should not be less than 0.\n");
+    }
+}
+
+void read_array(int a[50],int n)
+{
+    for(i=0; i<n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+}
+
+void disply_array(int a[50],int n)
+{
+    for(i=0; i<n; i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n");
+}
+
+void min_array(int a[50],int n)
+{
+    int min;
+    min=a[0];
+    for(i=0; i<n; i++)
+    {
+        if(a[i]<min)
+        {
+            min=a[i];
+        }
+    }
+    printf("Lowest number in array is %d.",min);
+}
+
+
+
+
+9)
